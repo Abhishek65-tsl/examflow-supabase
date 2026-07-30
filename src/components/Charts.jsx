@@ -1,0 +1,3 @@
+import {ResponsiveContainer,AreaChart,Area,XAxis,YAxis,CartesianGrid,Tooltip,BarChart,Bar} from 'recharts';
+export function Trend({data}){return <div className="chart"><ResponsiveContainer><AreaChart data={data}><CartesianGrid strokeDasharray="3 3" vertical={false}/><XAxis dataKey="name"/><YAxis domain={[0,100]}/><Tooltip/><Area type="monotone" dataKey="score" stroke="#2563eb" strokeWidth={3} fill="#dbeafe"/></AreaChart></ResponsiveContainer></div>}
+export function Bars({data}){return <div className="chart"><ResponsiveContainer><BarChart data={data}><CartesianGrid strokeDasharray="3 3" vertical={false}/><XAxis dataKey="name"/><YAxis domain={[0,100]}/><Tooltip/><Bar dataKey="score" fill="#2563eb" radius={[8,8,0,0]}/></BarChart></ResponsiveContainer></div>}
